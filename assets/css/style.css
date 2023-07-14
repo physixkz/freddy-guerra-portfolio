@@ -1,0 +1,155 @@
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: teal;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    display: block;
+    color: teal;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+
+#banner {
+    width: 100%;
+    height: 200px;
+}
+
+#banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: -40px;
+    margin-left: -20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+section {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+section h2 {
+    margin-right: 20px;
+    padding-right: 20px;
+    position: relative;
+    width: 120px;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -2px;
+    height: 100%;
+    width: 2px;
+    background-color: black;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 20px;
+}
+
+.projects img {
+    max-width: 500px;
+    height: auto;
+}
+
+.projects a {
+    display: inline-block;
+    margin: 10px;
+    border: 15px solid black;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 700px;
+    max-height: 700px;
+}
+
+.projects a:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-color: lightblue;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+    }
+
+    nav li a {
+        padding: 10px 16px;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+
+    section h2 {
+        padding-right: 0;
+    }
+
+    section h2::after {
+        display: none;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: teal;
+    align-items: center;
+    display: flex;
+    padding: 0px;
+    margin-top: auto;
+}
